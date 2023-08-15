@@ -9,10 +9,10 @@ On MacOS, move the `Fragment Identifier.workflow` file to `~/Library/Services` f
 ### Usage
 
 1. Select some text on a website.
-2. Right-click (or Control-click) on the selected text. Under the _Services_ submenu, you should see the _Fragment Identifier_ option.
+2. Right-click (or Control-click) on the selected text. Under the _Services_ submenu, you should now see a new item named _Fragment Identifier_.
 3. Click _Fragment Identifier_.
-4. The current website's URL, appended with a fragment identifier for the selected text, will be copied to your clipboard.
-5. Now paste your new URL including the fragment identifier wherever you'd like! 🎉
+4. The current website's URL, appended with a fragment identifier for the selected text, will now be copied to your clipboard.
+5. Paste your new URL including the fragment identifier wherever you'd like! 🎉
 <br>
 
 > [!NOTE]
