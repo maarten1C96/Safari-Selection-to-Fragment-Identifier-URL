@@ -11,10 +11,14 @@ On MacOS, moving the *Fragment Identifier.workflow* file to *~/Library/Services*
 [!NOTE]
 **First-Time Users**: The initial use may prompt for a permission to use "JavaScript via AppleScript" (or something similair: I'd appreciate receiving a screenshot for mentioning correct text here!). If you'd rather not use JavaScript through AppleScript, consider substituting 
 
-```set baseURL to do JavaScript "window.location.href" in front document```
+```AppleScript
+set baseURL to do JavaScript "window.location.href" in front document
+```
 
 with
 
-```set baseURL to URL of front document```
+```AppleScript
+set baseURL to URL of front document
+```
 
 However, when replacing the latter, be aware that the baseURL may start with "favorites://" if the website you're currently on is also mentioned in your "Favorites".
