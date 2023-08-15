@@ -1,6 +1,6 @@
 # Safari Selection to Fragment Identifier URL
 
-On MacOS, moving the _Fragment Identifier.workflow_ file to _~/Library/Services_ will enable the "Fragment Identifier" service in Safari. Here's how to make use of this:
+On MacOS, moving the *Fragment Identifier.workflow* file to *~/Library/Services* will enable the "Fragment Identifier" service in Safari. Here's how to make use of this:
 
 1. Select some text on a website.
 2. Right-click (or Control-click) on the selected text. Under the _Services_ submenu, you should see the _Fragment Identifier_ option.
