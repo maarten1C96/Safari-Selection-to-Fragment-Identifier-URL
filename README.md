@@ -8,7 +8,7 @@ On MacOS, moving the _Fragment Identifier.workflow_ file to _~/Library/Services_
 4. The current website's URL, appended with a fragment identifier for the selected text, will be copied to your clipboard.
 5. Paste your new URL including the fragment identifier wherever you'd like! 🎉
 
-Note: First time using this service, you might be prompted for permission to use `JavaScript via AppleScript` (or something similair: I'd appreciate a screenshot sent to me for the correct text!). If you'd rather not use JavaScript through AppleScript, you can replace the line
+Note: First time using this service, you might be prompted for permission to use "JavaScript via AppleScript" (or something similair: I'd appreciate receiving a screenshot for mentioning correct text here!). If you'd rather not use JavaScript through AppleScript, you can replace the line
 
 ```set baseURL to do JavaScript "window.location.href" in front document```
 
