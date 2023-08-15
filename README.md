@@ -4,7 +4,7 @@ Easily generate a URL including a fragment identifier based on the website and t
 
 ### Installation
 
-On MacOS, move the `Fragment Identifier.workflow` file to `~/Library/Services` to enable the "Fragment Identifier" service in Safari.
+On MacOS, move the `Fragment Identifier.workflow` file to `~/Library/Services` for enabling the "Fragment Identifier" service in Safari.
 
 ### Usage
 
