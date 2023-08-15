@@ -16,7 +16,7 @@ On MacOS, move the `Fragment Identifier.workflow` file to `~/Library/Services` f
 <br>
 
 > [!NOTE]
-> **First-Time Users**: Initial usage might prompt for permission to use "JavaScript via AppleScript" (_or something similair: I'd appreciate receiving a screenshot for mentioning correct text here!_). If you'd rather not use JavaScript through AppleScript, consider substituting 
+> **First-Time Users**: Initial usage might prompt for permission to use "JavaScript via AppleScript" (_or something similair: I'd appreciate receiving a screenshot for mentioning correct text here!_). If you'd rather not use via javascript, consider substituting 
 >
 >```AppleScript
 >set baseURL to do JavaScript "window.location.href" in front document
