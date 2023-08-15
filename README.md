@@ -1,6 +1,6 @@
 ## Safari Selection to Fragment Identifier URL
 
-Easily generate a URL with a fragment identifier based on your selected text in Safari (MacOS).
+Easily generate a URL including a fragment identifier based on the website and text selected in Safari (MacOS).
 
 ### Installation
 
