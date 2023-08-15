@@ -14,6 +14,7 @@ On MacOS, move the `Fragment Identifier.workflow` file to `~/Library/Services` f
 4. The current website's URL, appended with a fragment identifier for the selected text, will now be copied to your clipboard.
 5. Paste your new URL including the fragment identifier wherever you'd like! 🎉
 <br>
+<br>
 
 > [!NOTE]
 > **First-Time Users**: Initial usage might prompt for permission to use "JavaScript via AppleScript". If you'd prefer not to accept this, consider substituting 
