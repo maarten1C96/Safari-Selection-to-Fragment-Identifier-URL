@@ -52,14 +52,57 @@
 				<dict>
 					<key>source</key>
 					<string>on run {input}
-	set textFragment to item 1 of input		-- Fetch the current URL from Safari	tell application "Safari"		-- set baseURL to URL of front document		set baseURL to do JavaScript "window.location.href" in front document	end tell		-- URL-encode text fragment	set encodedFragment to my urlEncode(textFragment)		-- Generate full URL with the fragment identifier	set fullURL to baseURL &amp; "#:~:text=" &amp; encodedFragment		return fullURL
-	end run
+	
+	set textFragment to item 1 of input
+	
+	-- Fetch the current URL from Safari
+	tell application "Safari"
+		-- set baseURL to URL of front document
+		set baseURL to do JavaScript "window.location.href" in front document
+	end tell
+	
+	-- URL-encode text fragment
+	set encodedFragment to my urlEncode(textFragment)
+	
+	-- Generate full URL with the fragment identifier
+	set fullURL to baseURL &amp; "#:~:text=" &amp; encodedFragment
+	
+	return fullURL
+	
+end run
 
 
--- URL-encode functionon urlEncode(inputStr)	set theText to inputStr	set theEncodedText to ""	repeat with a from 1 to count theText		set theChar to character a of theText		set theASCIINumber to ASCII number of theChar		if theASCIINumber = 32 then			set theEncodedText to theEncodedText &amp; "%20"		else if (theASCIINumber &lt; 48) or (theASCIINumber &gt; 57 and theASCIINumber &lt; 65) or (theASCIINumber &gt; 90 and theASCIINumber &lt; 97) or (theASCIINumber &gt; 122) then			set theEncodedText to theEncodedText &amp; "%" &amp; my decimalToHex(theASCIINumber, 2)		else			set theEncodedText to theEncodedText &amp; theChar		end if	end repeat	return theEncodedTextend urlEncode
+
+-- URL-encode function
+on urlEncode(inputStr)
+	
+	set theText to inputStr
+	set theEncodedText to ""
+	repeat with i from 1 to count theText
+		set theChar to character i of theText
+		set theASCIINumber to ASCII number of theChar
+		if theASCIINumber = 32 then
+			set theEncodedText to theEncodedText &amp; "%20"
+		else if (theASCIINumber &lt; 48) or (theASCIINumber &gt; 57 and theASCIINumber &lt; 65) or (theASCIINumber &gt; 90 and theASCIINumber &lt; 97) or (theASCIINumber &gt; 122) then
+			set theEncodedText to theEncodedText &amp; my encodeCharacter(theChar)
+		else
+			set theEncodedText to theEncodedText &amp; theChar
+		end if
+	end repeat
+	return theEncodedText
+	
+end urlEncode
 
 
--- Helper function to convert decimal to hexon decimalToHex(theNumber, minCharacters)	set theHexList to {"0", "1", "2", "3", "4", "5", "6", "7", "8", "9", "A", "B", "C", "D", "E", "F"}	set theHex to ""	repeat until theNumber is less than 1		set theRemainder to theNumber mod 16		set theHex to item (theRemainder + 1) of theHexList &amp; theHex		set theNumber to theNumber div 16	end repeat	repeat while (count of theHex) is less than minCharacters		set theHex to "0" &amp; theHex	end repeat	return theHexend decimalToHex</string>
+
+on encodeCharacter(theCharacter)
+	set theASCIINumber to (ASCII number theCharacter)
+	set theHexList to {"0", "1", "2", "3", "4", "5", "6", "7", "8", "9", "A", "B", "C", "D", "E", "F"}
+	set theFirstItem to item ((theASCIINumber div 16) + 1) of theHexList
+	set theSecondItem to item ((theASCIINumber mod 16) + 1) of theHexList
+	return ("%" &amp; theFirstItem &amp; theSecondItem) as string
+end encodeCharacter
+</string>
 				</dict>
 				<key>BundleIdentifier</key>
 				<string>com.apple.Automator.RunScript</string>
@@ -113,7 +156,7 @@ end run</string>
 				<key>isViewVisible</key>
 				<integer>1</integer>
 				<key>location</key>
-				<string>309.000000:803.000000</string>
+				<string>267.500000:368.000000</string>
 				<key>nibPath</key>
 				<string>/System/Library/Automator/Run AppleScript.action/Contents/Resources/Base.lproj/main.nib</string>
 			</dict>
@@ -200,7 +243,7 @@ end run</string>
 	</array>
 	<key>connectors</key>
 	<dict>
-		<key>4E3AD277-18F3-4D59-BDEB-B58ADA57F579</key>
+		<key>1A09ADE8-CBB9-4A8C-AB0A-F96E66DDFBC4</key>
 		<dict>
 			<key>from</key>
 			<string>0A55755A-1891-4EA5-98F9-B011CAE5F19B - 0A55755A-1891-4EA5-98F9-B011CAE5F19B</string>
